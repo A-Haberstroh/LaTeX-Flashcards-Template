@@ -1,0 +1,61 @@
+\documentclass[a4_a7,frame]{flashcards}
+
+% Images
+\usepackage{graphicx}
+
+% Email with hyperlink and without annoying box
+\usepackage[hidelinks]{hyperref}
+
+% LaTeX math
+\usepackage{mathtools}
+
+% Bold math symbols
+\usepackage{bm}
+
+% Command for ''must be equal to'' sign
+\newcommand{\mbeq}{\overset{!}{=}}
+
+% Document change history
+\usepackage{vhistory}
+
+% Margins for single page
+\usepackage{geometry}
+
+\cardfrontstyle[]{headings}
+
+% Fix Header Position
+\cardfrontheadstyle[\vspace{-4pt}\hspace{0pt}]{}
+
+% Import Config
+\input{config/config}
+
+\title{\vspace{3cm}\line(1,0){350}\\\textsc{Flashcards for\\\textsc{\MyLecture}\\\line(1,0){350}}}
+
+\begin{document}
+	% Remove page numbering
+	\pagenumbering{gobble}
+	% Setup margins for titlepage only
+	\newgeometry{left=2cm,bottom=1cm,right=2cm,top=1cm}
+	% Insert titlepage
+	\maketitle
+	% Insert revision history
+	\vspace*{\fill}
+	\begin{versionhistory}
+		\vhEntry{0.1}{DD.MM.YY}{XX}{Initial Release}
+	\end{versionhistory}
+	\newpage
+	\restoregeometry
+	\vspace*{\fill}
+	\centering This page is intentionally left blank to ensure proper duplex printing.\par
+	\vspace{\fill}
+	\newpage
+
+	% Insert Chapters
+	\input{src/ch1}
+	\input{src/ch2}
+	\input{src/ch3}
+	\input{src/ch4}
+	\input{src/ch5}
+	\input{src/ch6}
+
+\end{document}
