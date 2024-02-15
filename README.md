@@ -1,10 +1,6 @@
-# KIT-Flashcards
+# LaTeX-Flashcards
 
-Flashcards for different KIT lectures. 
-
-Main branch contains template. 
-
-Each Lecture should be maintained in its own branch!
+Template to create Flashcards and print them double sided.
 
 ## Necessary TeX packages:
 - flashcards
